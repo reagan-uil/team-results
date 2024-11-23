@@ -45,9 +45,9 @@ nav > a {
 a {
   color: silver;
 }
-.active {
+/* .active {
   color: white;
-}
+} */
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -78,17 +78,12 @@ h1 {
   margin-top: 24px;
   margin-bottom: 12px;
   text-align: center;
-  color: #fff;
 }
 
 h2 {
   font-family: 'Merriweather', serif;
   font-size: 1.8rem;
   margin-top: 1.5rem;
-}
-
-p {
-  color: #000;
 }
 
 .dates {
