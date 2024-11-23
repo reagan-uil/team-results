@@ -1,0 +1,150 @@
+body {
+  color: silver;
+  background-color: #002c00;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 18px;
+}
+
+header,
+main,
+footer {
+  display: block;
+}
+
+main {
+  padding-bottom: 40px;
+}
+
+footer {
+  padding: 24px;
+}
+
+nav > a {
+  margin: 0 8px;
+  transition: border-color 0.5s;
+}
+
+a {
+  color: silver;
+}
+.active {
+  color:white;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  width: 60%;
+  margin: auto;
+  max-width: 960px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 2.8rem;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  text-align: center;
+  color: #fff;
+}
+
+h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
+}
+
+p {
+  color: #000;
+}
+
+.dates {
+  margin-top: -0.25rem;
+  margin-bottom: 0.25rem;
+  font-family: 'Merriweather', serif;
+}
+
+.footnote {
+  text-align: center;
+}
+
+::marker {
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  text-transform: none;
+  text-indent: 0px !important;
+  text-align: start !important;
+  text-align-last: start !important;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+.box {
+  width: 250px;
+  height: 100px;
+  border: 1px solid silver;
+  color: silver;
+  text-align: center;
+  line-height: 100px;
+  display: inline-block;
+  font-size: 1.75rem;
+}
+.gold,
+.silver,
+.bronze {
+  color: black;
+  border: 1px solid black;
+}
+.gold {
+  background-color: #ffd700;
+}
+.silver {
+  background-color: #b1b1b1;
+}
+.bronze {
+  background-color: #b48c6a;
+}

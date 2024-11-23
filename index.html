@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="src/info.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+    <title>Reagan HS Historical Results</title>
+    <link rel="shortcut icon" type="shortcut icon" href="src/favicon.ico" />
+  </head>
+  <body>
+    <header>
+      <h1>Reagan High School Academic UIL Results</h1>
+      <nav>
+        <a
+          href="https://reagan-uil.github.io/"
+          class="active"
+          >Back to Main Site</a
+        >
+        <a href="src/walloffame.html" class="active">Wall of Fame</a>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row">
+          <section>
+            <select name="year" id="year">
+              <option value="Select Year" disabled selected>Select Year</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+            </select>
+            <select name="event" id="event">
+              <option value="Select Event" disabled selected>
+                Select Event
+              </option>
+              <option value="AC">Accounting</option>
+              <option value="CL">Calculator</option>
+              <option value="CO">Computer Applications</option>
+              <option value="CS">Computer Science</option>
+              <option value="CP">Copy Editing</option>
+              <option value="CE">Current Events</option>
+              <option value="FW">Feature Writing</option>
+              <option value="GM">Mathematics</option>
+              <option value="LC">Literary Crit</option>
+              <option value="NS">Number Sense</option>
+              <option value="PO">Poetry Interpretation</option>
+              <option value="PR">Prose Interpretation</option>
+              <option value="SC">Science</option>
+              <option value="SS">Social Studies</option>
+              <option value="SP">Spelling</option>
+            </select>
+            <button onclick="query();">Submit</button>
+            <br />
+
+            <div id="toggle"></div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <script src="src/index.js"></script>
+    <footer class="footnote">
+      <a href="https://postings.speechwire.com/r-uil.php" target="_blank"
+        >All District, Region, and State results can be found here.</a
+      >
+    </footer>
+  </body>
+</html>
