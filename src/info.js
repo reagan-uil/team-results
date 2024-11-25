@@ -17,6 +17,17 @@ var event = [
 ];
 
 var tres = [
+  ["2022 AC", "1st Team Districts | 3rd Team Regionals"],
+  ["2022 CL", "1st Team Districts | 3rd Team Regionals"],
+  ["2022 CS", "1st Team Districts | 5th Team Regionals"],
+  ["2022 CE", "3rd Team Districts"],
+  ["2022 LC", "1st Team Districts | 3rd Team Regionals"],
+  ["2022 GM", "1st Team Districts | 1st Team Regionals | 4th Team State"],
+  ["2022 NS", "2nd Team Districts"],
+  ["2022 SC", "1st Team Districts | 1st Team Regionals | 4th Team State"],
+  ["2022 SS", "3rd Team Districts"],
+  ["2022 SP", "1st Team Districts | 6th Team Regionals",]
+
   ["2023 AC", "1st Team Districts | 2nd Team Regionals"],
   ["2023 CL", ""],
   ["2023 CS", "1st Team Districts | 5th Team Regionals"],
@@ -26,6 +37,7 @@ var tres = [
   ["2023 SC", "1st Team Districts | 2nd Team Regionals"],
   ["2023 SS", "5th Team Districts"],
   ["2023 SP", "4th Team Districts"],
+
   ["2024 CL", "2nd Team Districts"],
   ["2024 CS", "1st Team Districts | 7th Team Regionals"],
   ["2024 CE", "2nd Team Districts | 3rd Team Regionals"],
@@ -38,6 +50,21 @@ var tres = [
 ]
 
 var res = [
+  ["2022 AC", "Joseph Rivera: 1st Districts, 4th Regionals | Laila Hill: 2nd Districts, 23rd Regionals | Austin Patrenella: 4th Districts, 7th Regionals | Sai Patel: 7th Districts, 16th Regionals"],
+  ["2022 CL", "Tony Li: 1st Districts, 22nd Regionals | Lester Heredia Gopar: 3rd Districts, 12th Regionals | Nathan Sujatno: 7th Districts, 16th Regionals | Gabriella Ganser: 10th Districts, 28th Regionals"],
+  ["2022 CO", "Joseph Rivera: 3rd Districts, 4th Regionals, 8th State | Lilian Corse: 4th Districts"],
+  ["2022 CS", "Sarthak Dayal: 1st Districts, 17th Regionals | Lester Heredia Gopar: 2nd Districts, 24th Regionals | Tony Li: 3rd Districts, 23rd Regionals | Pohan Ai: 7th Districts, 17th Regionals"],
+  ["2022 CP", "Emily Skowron: 3rd Districts | Gabriella Ganser: 4th Districts"],
+  ["2022 CE", "Charles Wentworth: 9th Districts | Aden Ramirez: 12th Districts | Emma Navarro: 15th Districts | Annabelle Baehr: 16th Districts"],
+  ["2022 FW", "Kira George: 3rd Districts"],
+  ["2022 LC", "Twara Sandeep: 1st Districts, 8th Regionals | Rohit Panekkat: 2nd Districts, 20th Regionals | Kathy Le: 4th Districts, 4th Regionals | Tristan Rios: 7th Districts"],
+  ["2022 GM", "Sarthak Dayal: 2nd Districts, 1st Regionals, 11th State | Lester Heredia Gopar: 3rd Districts, 2nd Regionals, 10th State | Kathy Le: 6th Districts, 10th Regionals, 19th State | Tony Li: 6th Districts, 12th Regionals, 25th State"],
+  ["2022 NS", "Nandana Surendran: 5th Districts | Tony Li: 6th Districts | Lester Heredia Gopar: 10th Districts | Aryan Singh: 31st Districts"],
+  ["2022 PO", "Katie Eanes: 1st Districts | Mia Gutirrez: 2nd Districts | Mia Annillo: 3rd Districts"],
+  ["2022 PR", "Jennifer Scott: 1st Districts | Kamryn Everett: 3rd Districts, 4th Regionals"],
+  ["2022 SC", "Sarthak Dayal: 1st Districts, 1st Physics Districts, 2nd Chemistry Districts, 1st Regionals, 17th State | Sidhartha Kakumanu: 2nd Districts, 6th Regionals, 27th State | Aryan Singh: 3rd Districts, 2nd Biology Districts, 2nd Physics Districts, 18th Regionals | Tony Li: 4th Districts, 7th Regionals, 24th State | Lester Heredia Gopar: 5th Districts, 1st Chemistry Districts, 8th Regionals, 21st State | Cindy Li: 7th Districts, 1st Biology Districts, 12th Regionals, 1st Biology Regionals, 28th State"],
+  ["2022 SS", "Roan Roux: 6th Districts | Emilio Dwarica: 7th Districts | Aden Ramirez: 10th Districts | Connor Cody: 11th Districts"],
+  ["2022 SP", "Ittiyanam Tomichan: 2nd Districts | Anna Liu: 3rd Districts, 24th Regionals | Nicole Keller: 10th Districts, 34th Regionals | Esshal Maknotiya: 12th Districts, 39th Regionals"],
   ["2023 AC", "Joseph Rivera: 1st Districts, 2nd Regionals, 15th State | Aracely Reid: 2nd Districts, 5th Regionals | Ethan Doyle: 3rd Districts, 10th Regionals"],
   ["2023 CL", "Nathan Sujatno: 1st Districts, 12th Regionals | Sarthak Dayal: 4th Districts"],
   ["2023 CO", "Joseph Rivera: 1st Districts, 7th Regionals | Katrina Rendon: 2nd Districts, 2nd Regionals, 11th State | Jorge Arnaiz Briseno: 3rd Districts, 12th Regionals"],
