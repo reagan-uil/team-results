@@ -2,21 +2,21 @@ import os
 
 gold, silver, bronze, other = "\U0001f947", "\U0001f948", "\U0001f949", "\U0001f3c5"
 comp_conv = {
-"AC":"Accounting",
-"CL":"Calculator",
-"CO":"Computer Applications",
-"CS":"Computer Science",
-"CP":"Copy Editing",
-"CE":"Current Events",
-"FW":"Feature Writing",
-"GM":"Mathematics",
-"LC":"Literary Crit",
-"NS":"Number Sense",
-"PO": "Poetry Interpretation",
-"PR": "Prose Interpretation",
-"SC":"Science",
-"SS":"Social Studies",
-"SP":"Spelling"
+	"AC":"Accounting",
+	"CL":"Calculator",
+	"CO":"Computer Applications",
+	"CS":"Computer Science",
+	"CP":"Copy Editing",
+	"CE":"Current Events",
+	"FW":"Feature Writing",
+	"GM":"Mathematics",
+	"LC":"Literary Crit",
+	"NS":"Number Sense",
+	"PO": "Poetry Interpretation",
+	"PR": "Prose Interpretation",
+	"SC":"Science",
+	"SS":"Social Studies",
+	"SP":"Spelling"
 }
 
 def rep(s): 
@@ -32,11 +32,11 @@ info = list(map(str.strip, open("src/info.js", "r").readlines()))
 team_idx = info.index("var tres = [")
 start_idx = info.index("var res = [")
 for i in range(start_idx+1, len(info)-1):
-	s = info[i][13:-3]
+	s = info[i][13:-3] # s is all rows of res
 	if s[-1] == ',':
 		s = s[:-1]
 	s = s.split(" | ")
-	for x in s:
+	for x in s: # x is all names
 		colon_idx = x.find(":")
 		x = x[:colon_idx]
 		names.add(x)
@@ -54,8 +54,8 @@ for s in names:
 	for i in range(start_idx+1, len(info)-1):
 		if s in info[i]:
 			comp.append(info[i][2:9])
-			SI = info[i].find(s)
-			FI = info[i].find("|", SI)
+			SI = info[i].find(s) #starting index
+			FI = info[i].find("|", SI) #final index
 			if FI == -1:
 				FI = info[i].find("\"", SI)
 
@@ -89,7 +89,6 @@ for s in names:
 					if ev_te_res[0] == ',':
 						ev_te_res = ev_te_res[2:]
 					res[cidx] += ", " + ev_te_res
-
 				results=ev_te_res.split()
 				for x in results:
 					if x=="1st":
