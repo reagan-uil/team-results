@@ -54,9 +54,9 @@ a {
 }
 
 .container {
-  width: 60%;
+  width: 70%;
   margin: auto;
-  max-width: 960px;
+  max-width: 1100px;
   padding-right: 15px;
   padding-left: 15px;
 }
