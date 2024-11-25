@@ -26,7 +26,7 @@ var tres = [
   ["2022 NS", "2nd Team Districts"],
   ["2022 SC", "1st Team Districts | 1st Team Regionals | 4th Team State"],
   ["2022 SS", "3rd Team Districts"],
-  ["2022 SP", "1st Team Districts | 6th Team Regionals",]
+  ["2022 SP", "1st Team Districts | 6th Team Regionals"],
 
   ["2023 AC", "1st Team Districts | 2nd Team Regionals"],
   ["2023 CL", ""],
