@@ -123,7 +123,7 @@ th {
 }
 
 .box {
-  width: 250px;
+  width: 90%;
   height: 100px;
   border: 1px solid silver;
   color: silver;
@@ -131,6 +131,11 @@ th {
   line-height: 100px;
   display: inline-block;
   font-size: 1.75rem;
+}
+@media only screen and (min-width: 768px) {
+  .box {
+    width: 250px;
+  }
 }
 .gold,
 .silver,
