@@ -1,6 +1,6 @@
 const params = new URLSearchParams(location.search);
-$('#year').val(params.get('year'));
-$('#event').val(params.get('event'));
+$('#year').val(params.get('year') || 'Select Year');
+$('#event').val(params.get('event') || 'Select Event');
 if (params.has('event') && params.has('year')) {
     const comp = event.find(([code]) => code === params.get('event'));
     console.assert(comp !== undefined);
