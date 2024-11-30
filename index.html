@@ -1,60 +1,148 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="src/style.css" />
+        <link rel="stylesheet" href="app.css" />
         <script src="src/info.js"></script>
+        <script defer src="src/index.js"></script>
         <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
         <title>Reagan HS Historical Results</title>
         <link rel="shortcut icon" type="shortcut icon" href="src/favicon.ico" />
     </head>
-    <body>
-        <div id="nav">
-            <nav class="navbar">
-                <a href="https://reagan-uil.github.io/"
-                    ><img
-                        src="https://reagan-uil.github.io/reaganlogo.png"
-                        alt="Reagan HS Logo"
-                        height="20px"
-                /></a>
-                <a href="https://reagan-uil.github.io/">Home</a>
-                <a href="/">Results</a>
-                <a href="https://reagan-uil.github.io/schedule">Schedule</a>
-                <div class="dropdown">
-                    <button class="dropbtn">Contests</button>
-                    <div class="dropdown-content">
-                        <a href="https://reagan-uil.github.io/accounting">Accounting</a>
-                        <a href="https://reagan-uil.github.io/currentevents">Current Events</a>
-                        <a href="https://reagan-uil.github.io/journalism">Journalism Events</a>
-                        <a href="https://reagan-uil.github.io/lit">Literary Criticism</a>
-                        <a href="https://reagan-uil.github.io/poetry">Poetry and Prose Interpretation</a>
-                        <a href="https://reagan-uil.github.io/readywrite">Ready Writing</a>
-                        <a href="https://reagan-uil.github.io/social">Social Studies</a>
-                        <a href="https://reagan-uil.github.io/spelling">Spelling</a>
+    <body class="bg-[#002c00]">
+        <label class="contents">
+            <input type="radio" name="menu__open" class="hidden" />
+            <nav class="flex bg-black text-gray-50">
+                <a
+                    class="flex flex-col justify-center items-center w-10 p-1 aspect-square"
+                    href="https://reagan-uil.github.io/"
+                >
+                    <img src="https://reagan-uil.github.io/reaganlogo.png" />
+                </a>
+                <a
+                    class="flex flex-col justify-center items-center p-2 underline hover:brightness-50"
+                    href="https://reagan-uil.github.io/"
+                    >Home</a
+                >
+                <a
+                    class="flex flex-col justify-center items-center p-2 underline hover:brightness-50"
+                    href="/"
+                    >Results</a
+                >
+                <a
+                    class="flex flex-col justify-center items-center p-2 underline hover:brightness-50"
+                    href="https://reagan-uil.github.io/schedule"
+                    >Schedule</a
+                >
+                <div class="">
+                    <label
+                        class="p-2 peer flex flex-col justify-center items-center cursor-pointer underline hover:brightness-50"
+                        aria-role="button"
+                    >
+                        Contests
+                        <input type="radio" name="menu__open" class="hidden" />
+                    </label>
+                    <div
+                        class="absolute hidden bg-black peer-has-[:checked]:block border-t border-gray-900"
+                    >
+                        <a
+                            class="p-2 block hover:brightness-50"
+                            href="https://reagan-uil.github.io/accounting"
+                            >Accounting</a
+                        >
+                        <a
+                            class="p-2 block hover:brightness-50"
+                            href="https://reagan-uil.github.io/currentevents"
+                            >Current Events</a
+                        >
+                        <a
+                            class="p-2 block hover:brightness-50"
+                            href="https://reagan-uil.github.io/journalism"
+                            >Journalism Events</a
+                        >
+                        <a
+                            class="p-2 block hover:brightness-50"
+                            href="https://reagan-uil.github.io/lit"
+                            >Literary Criticism</a
+                        >
+                        <a
+                            class="p-2 block hover:brightness-50"
+                            href="https://reagan-uil.github.io/poetry"
+                            >Poetry and Prose Interpretation</a
+                        >
+                        <a
+                            class="p-2 block hover:brightness-50"
+                            href="https://reagan-uil.github.io/readywrite"
+                            >Ready Writing</a
+                        >
+                        <a
+                            class="p-2 block hover:brightness-50"
+                            href="https://reagan-uil.github.io/social"
+                            >Social Studies</a
+                        >
+                        <a
+                            class="p-2 block hover:brightness-50"
+                            href="https://reagan-uil.github.io/spelling"
+                            >Spelling</a
+                        >
                     </div>
                 </div>
-                <div class="dropdown">
-                    <button class="dropbtn">STEM Contests</button>
-                    <div class="dropdown-content">
-                        <a href="https://reagan-uil.github.io/math">Mathematics</a>
-                        <a href="https://reagan-uil.github.io/calculator">Calculator Applications</a>
-                        <a href="https://reagan-uil.github.io/numbersense">Number Sense</a>
-                        <a href="https://reagan-uil.github.io/science">Science</a>
-                        <a href="https://reagan-uil.github.io/compsci">Computer Science</a>
+                <div class="">
+                    <label
+                        class="p-2 peer flex flex-col justify-center items-center cursor-pointer underline hover:brightness-50"
+                        aria-role="button"
+                    >
+                        STEM Contests
+                        <input type="radio" name="menu__open" class="hidden" />
+                    </label>
+                    <div
+                        class="absolute hidden bg-black peer-has-[:checked]:block border-t border-gray-900"
+                    >
+                        <a
+                            class="p-2 block hover:brightness-50"
+                            href="https://reagan-uil.github.io/math"
+                            >Mathematics</a
+                        >
+                        <a
+                            class="p-2 block hover:brightness-50"
+                            href="https://reagan-uil.github.io/calculator"
+                            >Calculator Applications</a
+                        >
+                        <a
+                            class="p-2 block hover:brightness-50"
+                            href="https://reagan-uil.github.io/numbersense"
+                            >Number Sense</a
+                        >
+                        <a
+                            class="p-2 block hover:brightness-50"
+                            href="https://reagan-uil.github.io/science"
+                            >Science</a
+                        >
+                        <a
+                            class="p-2 block hover:brightness-50"
+                            href="https://reagan-uil.github.io/compsci"
+                            >Computer Science</a
+                        >
                     </div>
                 </div>
-                <a href="https://reagan-uil.github.io/resources">Resources</a>
+                <a
+                    class="flex flex-col justify-center items-center p-2"
+                    href="https://reagan-uil.github.io/resources"
+                    >Resources</a
+                >
             </nav>
-        </div>
-        <header>
-            <h1>Reagan High School Academic UIL Results</h1>
-        </header>
-        <main>
-            <div class="container">
-                <div class="row">
-                    <section>
-                        <select name="year" id="year">
+            <header class="font-serif text-gray-300">
+                <h1 class="text-4xl text-center mt-10">
+                    Reagan High School Academic UIL Results
+                </h1>
+            </header>
+            <main
+                class="font-sans max-w-6xl m-auto flex flex-col items-center mt-4"
+            >
+                <form method="get">
+                    <div class="inline relative">
+                        <select name="year" id="year" class="appearance-none bg-gray-200 rounded-md px-2">
                             <option value="Select Year" disabled selected>
                                 Select Year
                             </option>
@@ -62,7 +150,10 @@
                             <option value="2023">2023</option>
                             <option value="2024">2024</option>
                         </select>
-                        <select name="event" id="event">
+                        <span class="absolute right-4 border-x-transparent border-t-black border-x-4 border-t-4 mt-3"/>
+                    </div>
+                    <div class="inline relative">
+                        <select name="event" id="event" class="appearance-none bg-gray-200 rounded-md px-2">
                             <option value="Select Event" disabled selected>
                                 Select Event
                             </option>
@@ -82,31 +173,34 @@
                             <option value="SS">Social Studies</option>
                             <option value="SP">Spelling</option>
                         </select>
-                        <button onclick="query();">Submit</button>
-                        <br />
-                        <div id="toggle"></div>
-                    </section>
-                </div>
-            </div>
-        </main>
-        <script src="src/index.js"></script>
-        <footer class="footnote">
-            <br />
-            <p>
-                District, Region, and State results can be found
-                <a
-                    href="https://postings.speechwire.com/r-uil.php"
-                    target="_blank"
-                >
-                    here (after 2022)</a
-                >
-                and
-                <a
-                    href="https://utdirect.utexas.edu/nlogon/uil/vlcp_pub_arch.WBX"
-                    target="_blank"
-                    >here (2022 and earlier).</a
-                >
-            </p>
-        </footer>
+                        <span class="absolute right-4 border-x-transparent border-t-black border-x-4 border-t-4 mt-3"/>
+                    </div>
+                    <!-- <button onclick="query();">Submit</button> -->
+                    <input
+                        type="submit"
+                        class="rounded-full px-6 bg-gray-200"
+                    />
+                </form>
+
+                <div id="toggle" class="text-gray-300" />
+            </main>
+            <footer class="footnote text-center absolute bottom-10 w-full text-gray-300">
+                <p>
+                    District, Region, and State results can be found
+                    <a
+                        href="https://postings.speechwire.com/r-uil.php"
+                        target="_blank"
+                    >
+                        here (after 2022)</a
+                    >
+                    and
+                    <a
+                        href="https://utdirect.utexas.edu/nlogon/uil/vlcp_pub_arch.WBX"
+                        target="_blank"
+                        >here (2022 and earlier).</a
+                    >
+                </p>
+            </footer>
+        </label>
     </body>
 </html>

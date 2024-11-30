@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.box {
+    @apply border border-gray-300 aspect-square w-60 inline-flex flex-col justify-center items-center m-2 font-sans
+}
+.gold {
+    @apply bg-amber-400 text-black border-black;
+}
+.silver {
+    @apply bg-slate-300 text-black border-black;
+}
+.bronze {
+    @apply bg-amber-800 text-black border-black;
+}
+#toggle a {
+    @apply underline font-semibold;
+}

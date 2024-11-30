@@ -16,5 +16,8 @@
         "prettier": "^3.3.3",
         "tailwindcss": "^3.4.15"
     },
-    "type": "module"
+    "type": "module",
+    "dependencies": {
+        "@types/jquery": "^3.5.32"
+    }
 }

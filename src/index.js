@@ -1,40 +1,53 @@
-function query() {
-    let y = $('#year').val();
-    let e = $('#event').val();
-    let comp = event.find((x) => x[0] == e)[1];
-    document.getElementById('toggle').innerHTML =
-        '<h2>' + y + ' ' + comp + '</h2>\n';
-
-    if (e != 'CO' && e != 'CP' && e != 'FW' && e != 'PR' && e != 'PO') {
-        // no team results
-        let team_res = tres.find((x) => x[0] == y + ' ' + e)[1].split(' | ');
-        team_res.forEach(function box(s) {
-            if (s.length == 0) return;
-            var txt = '<div class="box';
-            if (s.includes('1st')) txt += ' gold';
-            if (s.includes('2nd')) txt += ' silver';
-            if (s.includes('3rd')) txt += ' bronze';
-            txt += '">' + s + '</div>\n';
-
-            document.getElementById('toggle').innerHTML += txt;
-        });
+const params = new URLSearchParams(location.search);
+$('#year').val(params.get('year'));
+$('#event').val(params.get('event'));
+if (params.has('event') && params.has('year')) {
+    const comp = event.find(([code]) => code === params.get('event'));
+    console.assert(comp !== undefined);
+    $('<h2>')
+        .text(`${params.get('year')} ${params.get('event')}`)
+        .appendTo('#content');
+    if (!['CO', 'CP', 'FW', 'PR', 'PO'].includes(params.get('event'))) {
+        tres.find(
+            ([code]) => code === `${params.get('year')} ${params.get('event')}`,
+        )[1]
+            .split('|')
+            .map((result) => result.trim())
+            .forEach((result) => {
+                $('<div>')
+                    .addClass('box')
+                    .addClass(
+                        result.includes('1st')
+                            ? 'gold'
+                            : result.includes('2nd')
+                              ? 'silver'
+                              : result.includes('3rd')
+                                ? 'bronze'
+                                : undefined,
+                    )
+                    .text(result)
+                    .appendTo('#toggle');
+            });
     }
-    document.getElementById('toggle').innerHTML += '<br\n';
-
-    let ind_res = res.find((x) => x[0] == y + ' ' + e)[1].split(' | ');
-    document.getElementById('toggle').innerHTML +=
-        '<h4>Team Members:</h4>\n<ul>\n';
-    ind_res.forEach(function mem(s) {
-        let txt = '<li>';
-        let idx = s.indexOf(':');
-        let name = s.substring(0, idx);
-        let link = name.toLowerCase().split(' ').join('-') + '.html';
-        txt += '<b><u><a href="profiles/' + link + '">' + name + '</a></u></b>';
-
-        if (s.length - idx > 2) {
-            txt += ': ' + s.substring(idx + 1);
-        }
-        document.getElementById('toggle').innerHTML += txt + '</li>\n';
-    });
-    document.getElementById('toggle').innerHTML += '</ul>\n<br>';
+    $('<br>').appendTo('#toggle');
+    $('<h4>').text('Team Members:').appendTo('#toggle');
+    $('<ul>')
+        .append(
+            res
+                .find(([eventName]) => eventName === `${params.get('year')} ${params.get('event')}`)[1]
+                .split('|')
+                .map((result) => result.trim())
+                .map((result) =>
+                    $('<li>').append(
+                        $('<a>')
+                            .attr(
+                                'href',
+                                `profiles/${result.split(':')[0].trim().split(' ').join('-')}.html`,
+                            )
+                        .text(result.split(':')[0].trim()),
+                        $('<span>').text(`: ${result.split(':')[1].trim()}`),
+                    ),
+                ),
+        )
+        .appendTo('#toggle');
 }

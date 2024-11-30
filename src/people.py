@@ -29,8 +29,8 @@ def rep(s):
 names = set()
 walloffame={}
 info = list(map(str.strip, open("src/info.js", "r").readlines()))
-team_idx = info.index("var tres = [")
-start_idx = info.index("var res = [")
+team_idx = info.index("export var tres = [")
+start_idx = info.index("export var res = [")
 for i in range(start_idx+1, len(info)-1):
 	s = info[i][13:-3] # s is all rows of res
 	if s[-1] == ',':
