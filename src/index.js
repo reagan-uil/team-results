@@ -42,7 +42,7 @@ if (params.has('event') && params.has('year')) {
                         $('<a>')
                             .attr(
                                 'href',
-                                `profiles/${result.split(':')[0].trim().split(' ').join('-')}.html`,
+                                `profiles/${result.split(':')[0].trim().toLowerCase().split(' ').join('-')}.html`,
                             )
                         .text(result.split(':')[0].trim()),
                         $('<span>').text(`: ${result.split(':')[1].trim()}`),
