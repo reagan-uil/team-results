@@ -1,4 +1,4 @@
-body {
+:root {
     color: silver;
     background-color: #002c00;
     font-family:
@@ -14,13 +14,9 @@ body {
         'Helvetica Neue',
         sans-serif;
 }
-
-nav {
-    display: flex;
-    justify-content: center;
-    font-size: 1.4rem;
-    font-weight: 300;
-    margin-bottom: 18px;
+* {
+    margin: 0;
+    padding: 0;
 }
 
 header,
@@ -35,15 +31,6 @@ main {
 
 footer {
     padding: 24px;
-}
-
-nav > a {
-    margin: 0 8px;
-    transition: border-color 0.5s;
-}
-
-a {
-    color: silver;
 }
 
 .row {
@@ -151,4 +138,55 @@ th {
 }
 .bronze {
     background-color: #b48c6a;
+}
+li {
+    color: silver;
+    margin-bottom: 5px;
+    padding-top: 5px;
+}
+#nav {
+    background-color: black;
+    padding: 10px;
+}
+a {
+    text-decoration: underline;
+    color: silver;
+}
+.navbar a:hover {
+    color: #c0c0c0bf;
+}
+.navbar a,
+.navbar .dropdown {
+    padding-right: 8px;
+}
+.dropbtn {
+    background-color: black;
+    text-decoration: underline;
+    padding: 0;
+    font-size: 16px;
+    border: none;
+    color: silver;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    z-index: 1;
+}
+.dropdown-content a {
+    text-decoration: underline;
+    text-decoration: none;
+    display: block;
+    padding-bottom: 5px;
+    padding-left: 3px;
+}
+.dropdown-content a:hover {
+    background-color: black;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
 }
