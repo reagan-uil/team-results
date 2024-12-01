@@ -13,5 +13,9 @@ export default [
                 ...globals.node,
             },
         },
+        rules: {
+            'no-unused-vars': 'warn',
+            'no-undef': 'warn',
+        },
     },
 ];
