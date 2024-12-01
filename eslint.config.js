@@ -14,5 +14,9 @@ export default [
                 ...globals.jquery
             },
         },
+        rules: {
+            'no-unused-vars': 'warn',
+            'no-undef': 'warn',
+        },
     },
 ];
