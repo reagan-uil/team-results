@@ -8,12 +8,16 @@ comp_conv = {
 	"CS":"Computer Science",
 	"CP":"Copy Editing",
 	"CE":"Current Events",
+	"EW":"Editorial Writing",
 	"FW":"Feature Writing",
 	"GM":"Mathematics",
-	"LC":"Literary Crit",
+	"HW":"Headline Writing",
 	"NS":"Number Sense",
-	"PO": "Poetry Interpretation",
-	"PR": "Prose Interpretation",
+	"NW":"News Writing",
+	"LC":"Literary Crit",
+	"PO":"Poetry Interpretation",
+	"PR":"Prose Interpretation",
+	"RW":"Ready Writing",
 	"SC":"Science",
 	"SS":"Social Studies",
 	"SP":"Spelling"
@@ -29,10 +33,11 @@ def rep(s):
 names = set()
 walloffame={}
 info = list(map(str.strip, open("src/info.js", "r").readlines()))
-team_idx = info.index("var tres = [")
+team_index = info.index("var tres = [")
 start_idx = info.index("var res = [")
 for i in range(start_idx+1, len(info)-1):
 	s = info[i][13:-3] # s is all rows of res
+	print(s)
 	if s[-1] == ',':
 		s = s[:-1]
 	s = s.split(" | ")
@@ -77,7 +82,7 @@ for s in names:
 					total+=1
 	for cidx in range(len(comp)):
 		c = comp[cidx]
-		for i in range(team_idx+1, start_idx-2):
+		for i in range(team_index+1, start_idx-2):
 			if c in info[i]:
 				ev_te_res = info[i][13:info[i].find("]")-1]
 				ev_te_res = ', '.join(map(str, ev_te_res.split(" | ")))
