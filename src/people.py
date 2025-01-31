@@ -32,14 +32,11 @@ def rep(s):
 
 names = set()
 walloffame={}
-info = list(map(str.strip, open("src/info.js", "r").readlines()))
-team_index = info.index("var tres = [")
-start_idx = info.index("var res = [")
+info = list(map(str.strip, open("src/info.txt", "r").readlines()))
+team_index = info.index("tres = [")
+start_idx = info.index("res = [")
 for i in range(start_idx+1, len(info)-1):
-	s = info[i][13:-3] # s is all rows of res
-	print(s)
-	if s[-1] == ',':
-		s = s[:-1]
+	s = info[i][12:-3] # s is all rows of res
 	s = s.split(" | ")
 	for x in s: # x is all names
 		colon_idx = x.find(":")
@@ -49,6 +46,7 @@ template = open("src/template.html", "r").readlines()
 
 os.chdir("profiles")
 for s in names:
+	print(s,"yay")
 	file_name = '-'.join(map(str, s.lower().split(" ")))
 	f = open(file_name + ".html", "wb")
 	txt = ''.join(map(str, template))
@@ -58,6 +56,7 @@ for s in names:
 	comp, res = [], []
 	for i in range(start_idx+1, len(info)-1):
 		if s in info[i]:
+			print(s,info[i])
 			comp.append(info[i][2:9])
 			SI = info[i].find(s) #starting index
 			FI = info[i].find("|", SI) #final index
@@ -66,52 +65,53 @@ for s in names:
 
 			ev_res = info[i][SI + len(s) + 2: FI].strip()
 			res.append(ev_res)
-			results=ev_res.split()
+			results=ev_res.split(",")
+			print(results)
 			for x in results:
-				if x=="1st":
+				if x=="1":
 					go+=1
 					total+=1
-				if x=="2nd":
+				if x=="2":
 					si+=1
 					total+=1
-				if x=="3rd":
+				if x=="3":
 					br+=1
 					total+=1
-				if x=="4th" or x=="5th" or x=="6th":
+				if x=="4" or x=="5" or x=="6":
 					ot+=1
 					total+=1
-	for cidx in range(len(comp)):
-		c = comp[cidx]
-		for i in range(team_index+1, start_idx-2):
-			if c in info[i]:
-				ev_te_res = info[i][13:info[i].find("]")-1]
-				ev_te_res = ', '.join(map(str, ev_te_res.split(" | ")))
-				if len(ev_te_res) != 0:
-					if ev_te_res[-2] == ',':
-						ev_te_res = ev_te_res[:-2]
-					if ev_te_res[-1] == ',':
-						ev_te_res = ev_te_res[:-1]
-					if ev_te_res[0] == ',':
-						ev_te_res = ev_te_res[2:]
-					res[cidx] += ", " + ev_te_res
-				results=ev_te_res.split()
-				for x in results:
-					if x=="1st":
-						go+=1
-						total+=1
-					if x=="2nd":
-						si+=1
-						total+=1
-					if x=="3rd":
-						br+=1
-						total+=1
-		if len(res[cidx]) != 0:
-			if res[cidx][-2] == ',':
-				res[cidx] = res[cidx][:-2]
-			if res[cidx][-1] == ',':
-				res[cidx] = res[cidx][:-1]
-			if res[cidx][0] == ',':
-				res[cidx] = res[cidx][2:]
+	# for cidx in range(len(comp)):
+	# 	c = comp[cidx]
+	# 	for i in range(team_index+1, start_idx-2):
+	# 		if c in info[i]:
+	# 			ev_te_res = info[i][13:info[i].find("]")-1]
+	# 			ev_te_res = ', '.join(map(str, ev_te_res.split(" | ")))
+	# 			if len(ev_te_res) != 0:
+	# 				if ev_te_res[-2] == ',':
+	# 					ev_te_res = ev_te_res[:-2]
+	# 				if ev_te_res[-1] == ',':
+	# 					ev_te_res = ev_te_res[:-1]
+	# 				if ev_te_res[0] == ',':
+	# 					ev_te_res = ev_te_res[2:]
+	# 				res[cidx] += ", " + ev_te_res
+	# 			results=ev_te_res.split()
+	# 			for x in results:
+	# 				if x=="1st":
+	# 					go+=1
+	# 					total+=1
+	# 				if x=="2nd":
+	# 					si+=1
+	# 					total+=1
+	# 				if x=="3rd":
+	# 					br+=1
+	# 					total+=1
+	# 	if len(res[cidx]) != 0:
+	# 		if res[cidx][-2] == ',':
+	# 			res[cidx] = res[cidx][:-2]
+	# 		if res[cidx][-1] == ',':
+	# 			res[cidx] = res[cidx][:-1]
+	# 		if res[cidx][0] == ',':
+	# 			res[cidx] = res[cidx][2:]
 
 	walloffame.update({s: total})
 	walloffame=dict(sorted(walloffame.items(), key=lambda item: item[1], reverse=True))
