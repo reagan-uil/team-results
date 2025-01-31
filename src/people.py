@@ -1,5 +1,6 @@
 import os
 
+checknames=0
 gold, silver, bronze, other = "\U0001f947", "\U0001f948", "\U0001f949", "\U0001f3c5"
 comp_conv = {
 	"AC":"Accounting",
@@ -46,7 +47,8 @@ template = open("src/template.html", "r").readlines()
 
 os.chdir("profiles")
 for s in names:
-	print(s,"yay")
+	checknames += 1
+	# print(s,"yay")
 	file_name = '-'.join(map(str, s.lower().split(" ")))
 	f = open(file_name + ".html", "wb")
 	txt = ''.join(map(str, template))
@@ -56,7 +58,7 @@ for s in names:
 	comp, res = [], []
 	for i in range(start_idx+1, len(info)-1):
 		if s in info[i]:
-			print(s,info[i])
+			# print(s,info[i])
 			comp.append(info[i][2:9])
 			SI = info[i].find(s) #starting index
 			FI = info[i].find("|", SI) #final index
@@ -65,8 +67,8 @@ for s in names:
 
 			ev_res = info[i][SI + len(s) + 2: FI].strip()
 			res.append(ev_res)
-			results=ev_res.split(",")
-			print(results)
+			results=ev_res.split(", ")
+			print(results,s)
 			for x in results:
 				if x=="1":
 					go+=1
@@ -142,3 +144,4 @@ for key, value in walloffame.items():
 	txt_res += "<tr><td><a href=\"../profiles/"+key.lower().replace(" ", "-") + ".html\">"+key+"</a></td><td>"+str(value)+"</td></tr>\n"
 txt = txt.replace("some crazy stuff", txt_res)
 f.write(txt.encode())
+print(checknames)
