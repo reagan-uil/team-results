@@ -1,6 +1,6 @@
 function query() {
     let y = $('#year').val();
-    let e = $('#event').val();
+    let e = $('#eventSelect').val();
     let comp = event.find((x) => x[0] == e)[1];
     document.getElementById('toggle').innerHTML =
         '<h2>' + y + ' ' + comp + '</h2>\n';
