@@ -43,9 +43,9 @@ def rep(s):
 
 names = set()
 walloffame={}
-info = list(map(str.strip, open("src/info.txt", "r").readlines()))
-team_index = info.index("tres = [")
-start_idx = info.index("res = [")
+info = list(map(str.strip, open("src/info.js", "r").readlines()))
+team_index = info.index("let tres = [")
+start_idx = info.index("let res = [")
 for i in range(start_idx+1, len(info)-1):
 	s = info[i][12:-3] # s is all rows of res
 	s = s.split("|")
@@ -73,8 +73,8 @@ for s in names:
 			if FI == -1:
 				FI = info[i].find("\"", SI)
 
-			ev_res = info[i][SI + len(s) + 2: FI].strip() #raw individual results
-			results=ev_res.split(", ")
+			ev_res = info[i][SI + len(s) + 1: FI].strip() #raw individual results
+			results=ev_res.split(",")
 			for x in results:
 				if (len(x)>2):
 					x=x[0]
