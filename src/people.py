@@ -38,7 +38,7 @@ team_index = info.index("tres = [")
 start_idx = info.index("res = [")
 for i in range(start_idx+1, len(info)-1):
 	s = info[i][12:-3] # s is all rows of res
-	s = s.split(" | ")
+	s = s.split("|")
 	for x in s: # x is all names
 		colon_idx = x.find(":")
 		x = x[:colon_idx]
@@ -66,10 +66,30 @@ for s in names:
 				FI = info[i].find("\"", SI)
 
 			ev_res = info[i][SI + len(s) + 2: FI].strip()
-			res.append(ev_res)
 			results=ev_res.split(", ")
-			print(results,s)
+			counter=0
+			for i in range(len(results)):
+				if len(results[i])>2:
+					counter-=1
+				else:
+					if (results[i]=="1"):
+						results[i]="1st"
+					elif (results[i]=="2"):
+						results[i]="2nd"
+					elif (results[i]=="3"):
+						results[i]="3rd"
+					else:
+						results[i]+="th"
+				if (counter==0):
+					results[i]+=" Districts"
+				if counter==1:
+					results[i]+=" Regionals"
+				if counter==2:
+					results[i]+=" State"
+				counter+=1
+			res.append(results)
 			for x in results:
+				x=x[0]
 				if x=="1":
 					go+=1
 					total+=1
@@ -128,10 +148,16 @@ for s in names:
 		if i >= 0 and comp[i][:5] != comp[i-1][:5]:
 			txt_res += "<br>\n"
 		txt_res += "<li><b>" + comp[i][:5] + comp_conv[comp[i][5:]] + "</b>"
-		if len(res[i]) >= 3: 
-			txt_res += ": " + res[i] + "</li>\n"
+		print(res,s)
+		txt_res += ": " 
+		for j in range(len(res[i])):
+			txt_res += res[i][j]
+			if j != len(res[i]) - 1:
+				txt_res += ", "
+		# for x in res[i]:
+		# 	txt_res += x
+		txt_res += "</li>\n"
 	txt_res += "</ul>"
-	
 	txt = txt.replace("some crazy stuff", txt_res)
 
 	f.write(rep(txt).encode())
