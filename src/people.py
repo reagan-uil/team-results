@@ -103,8 +103,12 @@ for s in names:
 				if counter==2:
 					results[i]+=" State"
 				counter+=1
-			res.append(results)
-			
+			results2=[]
+			for x in results:
+				if x[0]=="0":
+					continue
+				results2.append(x)
+			res.append(results2)
 	for cidx in range(len(comp)): #loops through all competitions person took part in
 		c = comp[cidx]
 		for i in range(team_index+1, start_idx-2):
