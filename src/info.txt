@@ -80,7 +80,7 @@ res = [
   ["2023 GM","Sarthak Dayal: 2, 6|Lester Heredia Gopar: 4, 10|Kathy Le: 6|Jack Guarnery: 8"],
   ["2023 PO","Katie Eanes: 1, 4"],
   ["2023 PR","Cassidy Reynolds: 1|Mia Annillo: 4"],
-  ["2023 SC","Cindy Li: 1, 1st Biology, 1st Chemistry, 3rd Physics, 9, 1st Biology, 17, 3rd Biology|Sarthak Dayal: 2, 3rd Biology, 1st Chemistry, 1st Physics, 2nd Biology, 2nd Physics, 18|Lester Heredia Gopar: 4, 1st Chemistry, 4, 3rd Chemistry, 5th Physics|Dan Samuel: 14|Sidhartha Kakumanu: 6, 4th Biology"],
+  ["2023 SC","Cindy Li: 1, 1st Biology, 1st Chemistry, 3rd Physics, 9, 1st Biology, 17, 3rd Biology|Sarthak Dayal: 2, 3rd Biology, 1st Chemistry, 1st Physics, 2, 2nd Biology, 2nd Physics, 18|Lester Heredia Gopar: 4, 1st Chemistry, 4, 3rd Chemistry, 5th Physics|Dan Samuel: 14|Sidhartha Kakumanu: 6, 4th Biology"],
   ["2023 SS","Charles Wentworth: 9|Connor Cody: 16|Aden Ramirez: 17|Emilio Dwarica: 19"],
   ["2023 SP","Nicole Keller: 4|Esshal Maknotiya: 12|Mia Gutirrez: 19"],
   ["2024 CL","William Liu: 3, 25|Johnson Wei: 5|Suho Park: 14|Mohit Singh: 18"],

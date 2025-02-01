@@ -23,7 +23,17 @@ comp_conv = {
 	"SS":"Social Studies",
 	"SP":"Spelling"
 }
-
+def formatPlace(place):
+	if (place=="1"):
+		place="1st"
+	elif (place=="2"):
+		place="2nd"
+	elif (place=="3"):
+		place="3rd"
+	else:
+		place+="th"
+	return place
+	
 def rep(s): 
 	s = s.replace("GOLD", gold)
 	s = s.replace("SILVER", silver)
@@ -48,48 +58,26 @@ template = open("src/template.html", "r").readlines()
 os.chdir("profiles")
 for s in names:
 	checknames += 1
-	# print(s,"yay")
 	file_name = '-'.join(map(str, s.lower().split(" ")))
 	f = open(file_name + ".html", "wb")
 	txt = ''.join(map(str, template))
 	txt = txt.replace("(Name)", s)
 
 	go, si, br, ot, total = 0, 0, 0, 0, 0
-	comp, res = [], []
+	comp, res = [], [] # comp is all competitions, res is all results
 	for i in range(start_idx+1, len(info)-1):
 		if s in info[i]:
-			# print(s,info[i])
 			comp.append(info[i][2:9])
 			SI = info[i].find(s) #starting index
 			FI = info[i].find("|", SI) #final index
 			if FI == -1:
 				FI = info[i].find("\"", SI)
 
-			ev_res = info[i][SI + len(s) + 2: FI].strip()
+			ev_res = info[i][SI + len(s) + 2: FI].strip() #raw individual results
 			results=ev_res.split(", ")
-			counter=0
-			for i in range(len(results)):
-				if len(results[i])>2:
-					counter-=1
-				else:
-					if (results[i]=="1"):
-						results[i]="1st"
-					elif (results[i]=="2"):
-						results[i]="2nd"
-					elif (results[i]=="3"):
-						results[i]="3rd"
-					else:
-						results[i]+="th"
-				if (counter==0):
-					results[i]+=" Districts"
-				if counter==1:
-					results[i]+=" Regionals"
-				if counter==2:
-					results[i]+=" State"
-				counter+=1
-			res.append(results)
 			for x in results:
-				x=x[0]
+				if (len(x)>2):
+					x=x[0]
 				if x=="1":
 					go+=1
 					total+=1
@@ -102,38 +90,56 @@ for s in names:
 				if x=="4" or x=="5" or x=="6":
 					ot+=1
 					total+=1
-	# for cidx in range(len(comp)):
-	# 	c = comp[cidx]
-	# 	for i in range(team_index+1, start_idx-2):
-	# 		if c in info[i]:
-	# 			ev_te_res = info[i][13:info[i].find("]")-1]
-	# 			ev_te_res = ', '.join(map(str, ev_te_res.split(" | ")))
-	# 			if len(ev_te_res) != 0:
-	# 				if ev_te_res[-2] == ',':
-	# 					ev_te_res = ev_te_res[:-2]
-	# 				if ev_te_res[-1] == ',':
-	# 					ev_te_res = ev_te_res[:-1]
-	# 				if ev_te_res[0] == ',':
-	# 					ev_te_res = ev_te_res[2:]
-	# 				res[cidx] += ", " + ev_te_res
-	# 			results=ev_te_res.split()
-	# 			for x in results:
-	# 				if x=="1st":
-	# 					go+=1
-	# 					total+=1
-	# 				if x=="2nd":
-	# 					si+=1
-	# 					total+=1
-	# 				if x=="3rd":
-	# 					br+=1
-	# 					total+=1
-	# 	if len(res[cidx]) != 0:
-	# 		if res[cidx][-2] == ',':
-	# 			res[cidx] = res[cidx][:-2]
-	# 		if res[cidx][-1] == ',':
-	# 			res[cidx] = res[cidx][:-1]
-	# 		if res[cidx][0] == ',':
-	# 			res[cidx] = res[cidx][2:]
+			counter=0
+			for i in range(len(results)):
+				if len(results[i])>2:
+					counter-=1
+				else:
+					results[i]=formatPlace(results[i])
+				if (counter==0):
+					results[i]+=" Districts"
+				if counter==1:
+					results[i]+=" Regionals"
+				if counter==2:
+					results[i]+=" State"
+				counter+=1
+			res.append(results)
+			
+	for cidx in range(len(comp)): #loops through all competitions person took part in
+		c = comp[cidx]
+		for i in range(team_index+1, start_idx-2):
+			if c in info[i]:
+				ev_te_res = info[i][12:info[i].find("]")-1]
+				results=ev_te_res.split(",")
+				for x in results:
+					if (len(x)>2):
+						x=x[0]
+					if x=="1":
+						go+=1
+						total+=1
+					if x=="2":
+						si+=1
+						total+=1
+					if x=="3":
+						br+=1
+						total+=1
+					
+				counter=0
+				for i in range(len(results)):
+					if (results[i]==""):
+						results.pop(i)
+						continue
+					results[i]=formatPlace(results[i])	
+					results[i]+=" Team"
+					if (counter==0):
+						results[i]+=" Districts"
+					if counter==1:
+						results[i]+=" Regionals"
+					if counter==2:
+						results[i]+=" State"
+					counter+=1
+				for x in results:
+					res[cidx].append(x)
 
 	walloffame.update({s: total})
 	walloffame=dict(sorted(walloffame.items(), key=lambda item: item[1], reverse=True))
@@ -148,14 +154,11 @@ for s in names:
 		if i >= 0 and comp[i][:5] != comp[i-1][:5]:
 			txt_res += "<br>\n"
 		txt_res += "<li><b>" + comp[i][:5] + comp_conv[comp[i][5:]] + "</b>"
-		print(res,s)
 		txt_res += ": " 
 		for j in range(len(res[i])):
 			txt_res += res[i][j]
 			if j != len(res[i]) - 1:
 				txt_res += ", "
-		# for x in res[i]:
-		# 	txt_res += x
 		txt_res += "</li>\n"
 	txt_res += "</ul>"
 	txt = txt.replace("some crazy stuff", txt_res)
@@ -170,4 +173,5 @@ for key, value in walloffame.items():
 	txt_res += "<tr><td><a href=\"../profiles/"+key.lower().replace(" ", "-") + ".html\">"+key+"</a></td><td>"+str(value)+"</td></tr>\n"
 txt = txt.replace("some crazy stuff", txt_res)
 f.write(txt.encode())
-print(checknames)
+
+print(checknames, "people processed")
