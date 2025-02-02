@@ -3,6 +3,7 @@
     padding: 0;
 }
 body {
+    padding: .2em;
     color: silver;
     background-color: #002c00;
     font-family:
@@ -57,8 +58,6 @@ nav a {
 .container {
     width: 100%;
     margin: auto;
-    padding-right: 15px;
-    padding-left: 15px;
 }
 @media only screen and (min-width: 768px) {
     .container {
@@ -101,15 +100,6 @@ h2 {
 .footnote {
     text-align: center;
 }
-
-/* ::marker {
-    unicode-bidi: isolate;
-    font-variant-numeric: tabular-nums;
-    text-transform: none;
-    text-indent: 0px !important;
-    text-align: start !important;
-    text-align-last: start !important;
-} */
 
 table {
     font-family: arial, sans-serif;
