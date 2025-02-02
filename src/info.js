@@ -21,6 +21,15 @@ let event = [
 ]
 
 let tres = [
+  ["2021 AC","2"],
+  ["2021 CL","1,2"],
+  ["2021 CS","1,5"],
+  ["2021 GM","1,3"],
+  ["2021 NS","2"],
+  ["2021 LC","1,4"],
+  ["2021 SC","1,2"],
+  ["2021 SS","1,5"],
+
   ["2022 AC","1,3"],
   ["2022 CL","1,3"],
   ["2022 CS","1,5"],
@@ -54,6 +63,22 @@ let tres = [
 ]
 
 let res = [
+  ["2021 AC","Aaron Medders:2,19|Marco Huereca:7|Isabella Castillo:8|Kevin Liu:9"],
+  ["2021 CL","Dina Tran:1,5|Lester Heredia Gopar:3,16|Tony Li:6,41|Nathan Sujatno:9,12"],
+  ["2021 CO","Karson Tate:2,7"],
+  ["2021 CS","Sarthak Dayal:2,14|Lester Heredia Gopar:4,21|Pohan Ai:5,27|Jeffery Kim:23"],
+  ["2021 CP","Emily Skowron:2|Natalia Lua:6"],
+  ["2021 EW","Natalia Lua:4|Maria Jimenez:5"],
+  ["2021 FW","Maria Jimenez:5"],
+  ["2021 GM","Lester Heredia Gopar:1,11|Ethan Bull:3,14|Sarthak Dayal:5,21|Kathy Le:7,24"],
+  ["2021 HW","Natalia Lua:3"],
+  ["2021 NS","Lester Heredia Gopar:3,15|Nandana Surendran:4|Ethan Bull:6|Tony Li:9"],
+  ["2021 LC","Rohit Panekkat:3,10|Kathy Le:4,4|Aurea Le:5,16|Twara Sandeep:9,22"],
+  ["2021 PO","Kayla Armbruster:3"],
+  ["2021 PR","Kathy He:2|Mia Gutierrez:3"],
+  ["2021 SC","Ethan Bull:1,1st Biology,1st Chemistry,2nd Physics,1,1st Biology,2nd Physics,2,1st Biology|Sarthak Dayal:3,2nd Biology,8|Aryan Singh:4,19|Patrick Muehlberger:5,12|Tony Li:6,2nd Chemistry|Dominic Tharakan:10"],
+  ["2021 SS","Nikhil Maraboyina:1,6|Anju Soman:2,20|Aryan Singh:4,24"],
+  ["2021 SP","Ittiyanam Tomichan:1,15|Anna Liu:3,21"],
   ["2022 AC","Joseph Rivera:1,4|Laila Hill:2,23|Austin Patrenella:4,7|Sai Patel:7,16"],
   ["2022 CL","Tony Li:1,22|Lester Heredia Gopar:3,12|Nathan Sujatno:7,16|Gabriella Ganser:10,28"],
   ["2022 CO","Joseph Rivera:3,4,8|Lilian Corse:4"],
@@ -64,7 +89,7 @@ let res = [
   ["2022 LC","Twara Sandeep:1,8|Rohit Panekkat:2,20|Kathy Le:4,4|Tristan Rios:7"],
   ["2022 GM","Sarthak Dayal:2,1,11|Lester Heredia Gopar:3,2,10|Kathy Le:6,10,19|Tony Li:6,12,25"],
   ["2022 NS","Nandana Surendran:5|Tony Li:6|Lester Heredia Gopar:10|Aryan Singh:31"],
-  ["2022 PO","Katie Eanes:1|Mia Gutirrez:2|Mia Annillo:3"],
+  ["2022 PO","Katie Eanes:1|Mia Gutierrez:2|Mia Annillo:3"],
   ["2022 PR","Jennifer Scott:1|Kamryn Everett:3,4"],
   ["2022 SC","Sarthak Dayal:1,1st Physics,2nd Chemistry,1,17|Sidhartha Kakumanu:2,6,27|Aryan Singh:3,2nd Biology,2nd Physics,18|Tony Li:4,7,24|Lester Heredia Gopar:5,1st Chemistry,8,21|Cindy Li:7,1st Biology,12,1st Biology,28"],
   ["2022 SS","Roan Roux:6|Emilio Dwarica:7|Aden Ramirez:10|Connor Cody:11"],
@@ -82,7 +107,7 @@ let res = [
   ["2023 PR","Cassidy Reynolds:1|Mia Annillo:4"],
   ["2023 SC","Cindy Li:1,1st Biology,1st Chemistry,3rd Physics,9,1st Biology,17,3rd Biology|Sarthak Dayal:2,3rd Biology,1st Chemistry,1st Physics,2,2nd Biology,2nd Physics,18|Lester Heredia Gopar:4,1st Chemistry,4,3rd Chemistry,5th Physics|Dan Samuel:14|Sidhartha Kakumanu:0,6,4th Biology"],
   ["2023 SS","Charles Wentworth:9|Connor Cody:16|Aden Ramirez:17|Emilio Dwarica:19"],
-  ["2023 SP","Nicole Keller:4|Esshal Maknotiya:12|Mia Gutirrez:19"],
+  ["2023 SP","Nicole Keller:4|Esshal Maknotiya:12|Mia Gutierrez:19"],
   ["2024 CL","William Liu:3,25|Johnson Wei:5|Suho Park:14|Mohit Singh:18"],
   ["2024 CS","Pohan Ai:1,28|William Liu:4,17|Yavuz Inan:5,33|Jack Mitchell:10,38"],
   ["2024 CE","Hudson Locke:3,10|Charles Wentworth:6,29|Cody Cox:7,8|Montserrat Arreola:13,22"],
