@@ -40,7 +40,7 @@ function query() {
             '<b><u><a href="profiles/' + link + '">' + name + '</a></u></b>: ';
         let res = s.substring(idx + 1).split(',');
         let place = '';
-        counter = 0;
+        let counter = 0;
         for (let i = 0; i < res.length; i++) {
             if (res[i] == '0') {
                 counter++;

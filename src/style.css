@@ -3,7 +3,7 @@
     padding: 0;
 }
 body {
-    padding: .2em;
+    padding: 0.2em;
     color: silver;
     background-color: #002c00;
     font-family:
@@ -99,6 +99,10 @@ h2 {
 
 .footnote {
     text-align: center;
+}
+
+.footnote p {
+    margin-bottom: 1em;
 }
 
 table {
