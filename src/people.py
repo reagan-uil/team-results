@@ -1,6 +1,7 @@
 import os
 
 checknames=0
+wallnames=0
 gold, silver, bronze, other = "\U0001f947", "\U0001f948", "\U0001f949", "\U0001f3c5"
 comp_conv = {
 	"AC":"Accounting",
@@ -174,8 +175,11 @@ f = open("walloffame.html", "wb")
 txt = ''.join(map(str, template))
 txt_res=""
 for key, value in walloffame.items():
-	txt_res += "<tr><td><a href=\"../profiles/"+key.lower().replace(" ", "-") + ".html\">"+key+"</a></td><td>"+str(value)+"</td></tr>\n"
+	if (value>2):
+		wallnames+=1
+		txt_res += "<tr><td><a href=\"../profiles/"+key.lower().replace(" ", "-") + ".html\">"+key+"</a></td><td>"+str(value)+"</td></tr>\n"
 txt = txt.replace("some crazy stuff", txt_res)
 f.write(txt.encode())
 
 print(checknames, "people processed")
+print(wallnames, "people on the wall of fame")

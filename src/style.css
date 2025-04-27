@@ -49,7 +49,7 @@ a {
     color: silver;
 }
 nav a {
-    padding-bottom: 8px;
+    padding-bottom: 12px;
 }
 .row {
     display: flex;
@@ -97,12 +97,9 @@ h2 {
     font-family: 'Merriweather', serif;
 }
 
-.footnote {
+p {
     text-align: center;
-}
-
-.footnote p {
-    margin-bottom: 1em;
+    margin-bottom: 12px; 
 }
 
 table {
