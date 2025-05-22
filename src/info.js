@@ -132,7 +132,7 @@ let res = [
   ["2025 CS","Levi Doles:11|Jack Mitchell:15|Kaitlin Tredmeyer:20|Michael Gu:26|Andrew Beyer:29"],
   ["2025 CE","Max Farber:7|Kaitlyn Aitken:20"],
   ["2025 LC","Catalina Cintron Vazquez:2,21|Summer Cearley:6,31|Esha Manandhar:8,32|Vicky Le:10,39|Nathaniel Martin:12"],
-  ["2025 GM","William Liu:1,2|Aarnav Shah:4,31|Levi Doles:7,36|Mohit Singh:8,13"],
+  ["2025 GM","William Liu:1,2,17|Aarnav Shah:4,31|Levi Doles:7,36|Mohit Singh:8,13"],
   ["2025 NS","William Liu:1,18|Levi Doles:8,23|Aarnav Shah:10,27|Mohit Singh:29,44"],
   ["2025 PO","Jasmine Wintemute:2|Kyra Yiannos:4|Kaitlyn Aitken:5"],
   ["2025 PR","Mary Kimbrough:1|Joy Balfour:5|Shalini Patel:6"],
