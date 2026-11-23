@@ -5,15 +5,16 @@
     "scripts": {
         "lint": "eslint . && prettier --check .",
         "format": "prettier --write .",
-        "bump": "pnpm update -i"
+        "bump": "pnpm update -i --latest"
     },
     "devDependencies": {
+        "@eslint/js": "^10.0.1",
         "@types/eslint": "^9.6.1",
-        "autoprefixer": "^10.4.20",
-        "eslint": "^9.19.0",
-        "eslint-config-prettier": "^10.0.1",
-        "globals": "^15.14.0",
-        "prettier": "^3.4.2"
+        "autoprefixer": "^10.7.0",
+        "eslint": "^10.15.0",
+        "eslint-config-prettier": "^10.1.8",
+        "globals": "^17.14.0",
+        "prettier": "^3.10.1"
     },
     "type": "module"
 }

@@ -68,7 +68,14 @@ let tres = [
   ["2025 NS","1,6"],
   ["2025 SC","2"],
   ["2025 SS","3"],
-  ["2025 SP","1,8"]
+  ["2025 SP","1,8"],
+
+  ["2026 CL","1,9"],
+  ["2026 GM","1,5"],
+  ["2026 LC","2"],
+  ["2026 NS","2"],
+  ["2026 SC","5"],
+  ["2026 SP","1,5"]
 ]
 
 let res = [
@@ -88,6 +95,7 @@ let res = [
   ["2021 SC","Ethan Bull:1,1st Biology,1st Chemistry,2nd Physics,1,1st Biology,2nd Physics,2,1st Biology|Sarthak Dayal:3,2nd Biology,8|Aryan Singh:4,19|Patrick Muehlberger:5,12|Tony Li:6,2nd Chemistry|Dominic Tharakan:10"],
   ["2021 SS","Nikhil Maraboyina:1,6|Anju Soman:2,20|Aryan Singh:4,24"],
   ["2021 SP","Ittiyanam Tomichan:1,15|Anna Liu:3,21"],
+
   ["2022 AC","Joseph Rivera:1,4|Laila Hill:2,23|Austin Patrenella:4,7|Sai Patel:7,16"],
   ["2022 CL","Tony Li:1,22|Lester Heredia Gopar:3,12|Nathan Sujatno:7,16|Gabriella Ganser:10,28"],
   ["2022 CO","Joseph Rivera:3,4,8|Lilian Corse:4"],
@@ -103,6 +111,7 @@ let res = [
   ["2022 SC","Sarthak Dayal:1,1st Physics,2nd Chemistry,1,17|Sidhartha Kakumanu:2,6,27|Aryan Singh:3,2nd Biology,2nd Physics,18|Tony Li:4,7,24|Lester Heredia Gopar:5,1st Chemistry,8,21|Cindy Li:7,1st Biology,12,1st Biology,28"],
   ["2022 SS","Roan Roux:6|Emilio Dwarica:7|Aden Ramirez:10|Connor Cody:11"],
   ["2022 SP","Ittiyanam Tomichan:2|Anna Liu:3,24|Nicole Keller:10,34|Esshal Maknotiya:12,39"],
+
   ["2023 AC","Joseph Rivera:1,2,15|Aracely Reid:2,5|Ethan Doyle:3,10"],
   ["2023 CL","Nathan Sujatno:1,12|Sarthak Dayal:4"],
   ["2023 CO","Joseph Rivera:1,7|Katrina Rendon:2,2,11|Jorge Arnaiz Briseno:3,12"],
@@ -117,6 +126,7 @@ let res = [
   ["2023 SC","Cindy Li:1,1st Biology,1st Chemistry,3rd Physics,9,1st Biology,17,3rd Biology|Sarthak Dayal:2,3rd Biology,1st Chemistry,1st Physics,2,2nd Biology,2nd Physics,18|Lester Heredia Gopar:4,1st Chemistry,4,3rd Chemistry,5th Physics|Dan Samuel:14|Sidhartha Kakumanu:0,6,4th Biology"],
   ["2023 SS","Charles Wentworth:9|Connor Cody:16|Aden Ramirez:17|Emilio Dwarica:19"],
   ["2023 SP","Nicole Keller:4|Esshal Maknotiya:12|Mia Gutierrez:19"],
+
   ["2024 CL","William Liu:3,25|Johnson Wei:5|Suho Park:14|Mohit Singh:18"],
   ["2024 CS","Pohan Ai:1,28|William Liu:4,17|Yavuz Inan:5,33|Jack Mitchell:10,38"],
   ["2024 CE","Hudson Locke:3,10|Charles Wentworth:6,29|Cody Cox:7,8|Montserrat Arreola:13,22"],
@@ -128,6 +138,7 @@ let res = [
   ["2024 SC","Cindy Li:1,1st Biology,1st Chemistry,1st Physics,3,2nd Biology,5th Chemistry,24,1st Biology|Yavuz Inan:4,3rd Physics,32|Alexis Tao:11,4th Chemistry,18|Dhruvi Desai:17|Julia Kazunas:0,20"],
   ["2024 SS","Manuel Mora:2,17|Katherine Green:6|Roan Roux:7"],
   ["2024 SP","Paige Opaska:1,11|Mariana Montemayor:7,21|Nicole Keller:10,28|Esshal Maknotiya:16,34"],
+
   ["2025 CL","William Liu:2,10|Akshata Mohanty:10|Yashwanth Movva:14"],
   ["2025 CS","Levi Doles:11|Jack Mitchell:15|Kaitlin Tredmeyer:20|Michael Gu:26|Andrew Beyer:29"],
   ["2025 CE","Max Farber:7|Kaitlyn Aitken:20"],
@@ -138,5 +149,14 @@ let res = [
   ["2025 PR","Mary Kimbrough:1|Joy Balfour:5|Shalini Patel:6"],
   ["2025 SC","William Liu:6|Angela Huang:7,1st Chemistry,24,5th Chemistry|Harsha Abburu:8,1st Biology,31|Reanna Rutledge:9|Alexis Tao:15,2nd Biology|Aarnav Shah:21"],
   ["2025 SS","Esha Manandhar:10|Kaitlyn Aitken:12|Nathaniel Martin:12|Catalina Cintron Vazquez:20"],
-  ["2025 SP","Paige Opaska:1,7|Mariana Montemayor:2,25|Akshata Mohanty:16,38|Esha Manandhar:24,40"]
+  ["2025 SP","Paige Opaska:1,7|Mariana Montemayor:2,25|Akshata Mohanty:16,38|Esha Manandhar:24,40"],
+
+  ["2026 CL","William Liu:1,11|Akshata Mohanty:6,42|Etan Deo:11,35|Darsh Patel:12,43|Mohit Singh:20"],
+  ["2026 LC","Esha Manandhar:4|Summer Cearley:5|Ngan Le:6"],
+  ["2026 GM","William Liu:1,6|Levi Doles:6,19|Aarnav Shah:7,29|Mohit Singh:9,24|Etan Deo:28|Akshata Mohanty:36"],
+  ["2026 NS","Levi Doles:4,34|Aarnav Shah:5|Etan Deo:10|Darsh Patel:29"],
+  ["2026 PO","Fernanda Rodriguez Garcia:3|Jasmine Wintemute:4|Kaitlyn Aitken:5"],
+  ["2026 PR","Giselle Anguiano:1,5|Chase Parks:2"],
+  ["2026 SC","William Liu:3,5th Chemistry,12,3rd Chemistry|Sofia Mendoza:28,4th Biology|Aarnav Shah:28|Xavier Celeste:34|Mohit Singh:38"],
+  ["2026 SP","Paige Opaska:2,5|Ariana Stark:5,24|Mariana Montemayor:7,27|Gabriel Sexton:17,38|Esha Manandhar:20|Luis Martinez:28"]
 ]

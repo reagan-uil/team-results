@@ -51,6 +51,8 @@ for i in range(start_idx+1, len(info)-1):
 	s = info[i][12:-3] # s is all rows of res
 	s = s.split("|")
 	for x in s: # x is all names
+		if not x.strip(): # skip blank lines and empty fields
+			continue
 		colon_idx = x.find(":")
 		x = x[:colon_idx]
 		names.add(x)
@@ -67,7 +69,7 @@ for s in names:
 	go, si, br, ot, total = 0, 0, 0, 0, 0
 	comp, res = [], [] # comp is all competitions, res is all results
 	for i in range(start_idx+1, len(info)-1):
-		if s in info[i]:
+		if s and s in info[i]:
 			comp.append(info[i][2:9])
 			SI = info[i].find(s) #starting index
 			FI = info[i].find("|", SI) #final index
